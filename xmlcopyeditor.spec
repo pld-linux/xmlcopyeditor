@@ -2,7 +2,7 @@ Summary:	Fast, free, validating XML editor
 Summary(pl.UTF-8):	Szybkim, wolnodostępnym, walidującym edytorem XML
 Name:		xmlcopyeditor
 Version:	1.2.0.6
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://dl.sourceforge.net/xml-copy-editor/%{name}-%{version}.tar.gz
