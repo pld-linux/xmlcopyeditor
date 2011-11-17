@@ -9,7 +9,10 @@ Source0:	http://dl.sourceforge.net/xml-copy-editor/%{name}-%{version}.tar.gz
 # Source0-md5:	da83df89bf13947ad5e83f4dfec22539
 URL:		https://sourceforge.net/projects/xml-copy-editor/
 BuildRequires:	aspell-devel
+BuildRequires:	boost-devel
+BuildRequires:	expat-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libxslt-devel
 BuildRequires:	pcre-devel
 BuildRequires:	wxGTK2-unicode-devel
 BuildRequires:	xerces-c-devel
