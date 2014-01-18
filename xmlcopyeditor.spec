@@ -5,7 +5,7 @@ Version:	1.2.0.12
 Release:	1
 License:	GPL v2
 Group:		Applications
-Source0:	http://dl.sourceforge.net/xml-copy-editor/%{name}-%{version}.tar.gz
+Source0:	http://download.sourceforge.net/xml-copy-editor/%{name}-%{version}.tar.gz
 # Source0-md5:	7f0288a05324ed594d53f049600c5aad
 URL:		https://sourceforge.net/projects/xml-copy-editor/
 BuildRequires:	aspell-devel
