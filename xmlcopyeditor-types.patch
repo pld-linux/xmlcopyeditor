@@ -1,0 +1,29 @@
+--- xmlcopyeditor-1.3.1.0/src/wraplibxml.cpp.orig	2022-10-08 17:18:24.000000000 +0200
++++ xmlcopyeditor-1.3.1.0/src/wraplibxml.cpp	2025-08-30 15:40:06.441676589 +0200
+@@ -54,7 +54,7 @@ public:
+ 		xmlLoadCatalog ( CONV ( catalogPath ) );
+ 		::catalog = xmlLoadACatalog ( CONV ( catalogPath ) );
+ 
+-		initGenericErrorDefaultFunc ( NULL );
++		initGenericErrorDefaultFunc ( (xmlGenericErrorFunc*) NULL );
+ 	}
+ 
+ 	~Initializer ()
+@@ -706,7 +706,7 @@ int WrapLibxml::saveEncoding (
+ 
+ wxString WrapLibxml::getLastError()
+ {
+-	xmlErrorPtr err = xmlGetLastError();
++	const xmlError *err = xmlGetLastError();
+ 
+ 	if ( !err )
+ 		return nonParserError;
+@@ -722,7 +722,7 @@ wxString WrapLibxml::getLastError()
+ 
+ std::pair<int, int> WrapLibxml::getErrorPosition()
+ {
+-	xmlErrorPtr err = xmlGetLastError();
++	const xmlError *err = xmlGetLastError();
+ 	if ( !err )
+ 		return std::make_pair ( 1, 1 );
+ 
